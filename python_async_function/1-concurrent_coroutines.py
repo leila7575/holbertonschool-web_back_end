@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-This module contains the asynchronous routine wait_n     
+This module contains the asynchronous routine wait_n
 """
 import asyncio
 from typing import List
+
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
