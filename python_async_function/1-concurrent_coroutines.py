@@ -13,5 +13,5 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     Returns the list of delays in ascending order
     """
     coroutine_list = [wait_random(max_delay) for i in range(n)]
-    completed_delays = [await o for o asyncio.as_completed(coroutine_list)]
+    completed_delays = [await o for o in asyncio.as_completed(coroutine_list)]
     return completed_delays
