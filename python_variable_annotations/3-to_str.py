@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-This module contains the function to_str 
+This module contains the function to_str
 """
 
 
