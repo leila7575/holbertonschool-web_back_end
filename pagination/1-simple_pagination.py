@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """This module contains the function index_range and the class Server
 to paginate a database of popular baby names."""
 import csv
