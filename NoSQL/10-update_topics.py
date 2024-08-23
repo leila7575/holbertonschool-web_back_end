@@ -4,7 +4,7 @@ from pymongo import MongoClient
 from typing import List
 
 
-def update_topics(mongo_collection, name, topics)::
+def update_topics(mongo_collection, name: str, topics: List[str]):
     """Changes all topics of a school document based on the name."""
     query = {"name": name}
     update = {"$set": {"topics": topics}}
