@@ -3,7 +3,7 @@
 to paginate a database of popular baby names."""
 import csv
 import math
-from typing import List
+from typing import List, Dict, Any
 
 
 def index_range(page: int, page_size: int) -> tuple:
@@ -35,11 +35,13 @@ class Server:
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Takes two arguments page and page_size
         Returns items between start index and end index."""
-        assert page > 0 and isinstance(page, int)
-        assert page_size > 0 and isinstance(page_size, int)
+        assert isinstance(page, int) and page > 0
+        assert isinstance(page_size, int) and page_size > 0
         start_index, end_index = index_range(page, page_size)
+
         dataset = self.dataset()
 
         if start_index >= len(dataset):
             return []
+
         return dataset[start_index:end_index]
