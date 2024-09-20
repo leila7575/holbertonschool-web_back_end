@@ -1,7 +1,6 @@
 const http = require('http');
 const url = require('url');
 const countStudents = require('./3-read_file_async');
-
 const app = http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url, true);
     res.setHeader('Content-Type', 'text/plain');
